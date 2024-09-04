@@ -1,39 +1,68 @@
-# A sample Python project
+# Turtle Locomotion Oracles
 
-![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
+This Python package contains oracles of the movement of turtle limbs during locomotion (e.g., swimming /)
+Some oracles are based on real-world observations of turtle locomotion, while others are based on theoretical/template models.
 
-A sample project that exists as an aid to the [Python Packaging User
-Guide][packaging guide]'s [Tutorial on Packaging and Distributing
-Projects][distribution tutorial].
+## Installation
 
-This project does not aim to cover best practices for Python project
-development as a whole. For example, it does not provide guidance or tool
-recommendations for version control, documentation, or testing.
+Installation is very easy - just clone the repository and install the package using pip.
 
-[The source for this project is available here][src].
+```bash
+pip install -e .
+```
 
-The metadata for a Python project is defined in the `pyproject.toml` file,
-an example of which is included in this project. You should edit this file
-accordingly to adapt this sample project to your needs.
+## Usage
 
-----
+## Provided Oracles
 
-This is the README file for the project.
+### Joint-space Oracles
 
-The file should use UTF-8 encoding and can be written using
-[reStructuredText][rst] or [markdown][md use] with the appropriate [key set][md
-use]. It will be used to generate the project webpage on PyPI and will be
-displayed as the project homepage on common code-hosting services, and should be
-written for that purpose.
+#### Cornelia Turtle Robot Joint Space Trajectory
 
-Typical contents for this file would include an overview of the project, basic
-usage examples, etc. Generally, including the project changelog in here is not a
-good idea, although a simple “What's New” section for the most recent version
-may be appropriate.
+This oracle provides a joint-space trajectory developed for the Cornelia turtle robot by (van der Geest et al., 2023).
+Please refer to the original paper for more information: https://doi.org/10.1038/s41598-023-37904-5
 
-[packaging guide]: https://packaging.python.org
-[distribution tutorial]: https://packaging.python.org/tutorials/packaging-projects/
-[src]: https://github.com/pypa/sampleproject
-[rst]: http://docutils.sourceforge.net/rst.html
-[md]: https://tools.ietf.org/html/rfc7764#section-3.5 "CommonMark variant"
-[md use]: https://packaging.python.org/specifications/core-metadata/#description-content-type-optional
+> van der Geest, N., Garcia, L., Borret, F., Nates, R., & Gonzalez, A. (2023).
+Soft-robotic green sea turtle (Chelonia mydas) developed to replace animal experimentation provides new insight
+into their propulsive strategies. Scientific Reports, 13(1), 11983.
+
+and cite it if you use this oracle in your research.
+
+```bibtex
+@article{van2023soft,
+  title={Soft-robotic green sea turtle (Chelonia mydas) developed to replace animal experimentation provides new insight into their propulsive strategies},
+  author={van der Geest, Nick and Garcia, Lorenzo and Borret, Fraser and Nates, Roy and Gonzalez, Alberto},
+  journal={Scientific Reports},
+  volume={13},
+  number={1},
+  pages={11983},
+  year={2023},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
+### Task-space Oracles
+
+#### Green Sea Turtle Swimming Task Space Trajectory
+
+This oracle provides a task-space trajectory that was fitted to video recordings of the swimming of Green sea turtles (van der Geest et al., 2022).
+Please refer to the original paper for more information: https://doi.org/10.1038/s41598-022-21459-y
+
+> van der Geest, N., Garcia, L., Nates, R., & Godoy, D. A. (2022).
+New insight into the swimming kinematics of wild Green sea turtles (Chelonia mydas).
+Scientific Reports, 12(1), 18151.
+
+and cite it if you use this oracle in your research.
+
+```bibtex
+@article{van2022new,
+  title={New insight into the swimming kinematics of wild Green sea turtles (Chelonia mydas)},
+  author={van der Geest, Nick and Garcia, Lorenzo and Nates, Roy and Godoy, Daniel A},
+  journal={Scientific Reports},
+  volume={12},
+  number={1},
+  pages={18151},
+  year={2022},
+  publisher={Nature Publishing Group UK London}
+}
+```

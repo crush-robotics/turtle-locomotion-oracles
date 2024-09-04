@@ -19,9 +19,9 @@ build-backend = "setuptools.build_meta" # If not defined, then legacy behavior c
 # package, this name will be registered for you. It will determine how
 # users can install this project, e.g.:
 #
-# $ pip install sampleproject
+# $ pip install turtle-loc-oracles
 #
-# And where it will live on PyPI: https://pypi.org/project/sampleproject/
+# And where it will live on PyPI: https://pypi.org/project/turtle-loc-oracles/
 #
 # There are some restrictions on what makes a valid project name
 # specification here:

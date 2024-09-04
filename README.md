@@ -20,8 +20,40 @@ pip install turtle-loc-oracles
 ```
 
 ## Usage
+We take a functional programming approach in this package. Here, is a simple example how the
+oracle motion functions can be constructed with the provided factory functions.
 
+```python
+import numpy as np
+from turtle_loc_oracles.task_space import green_sea_turtle_task_space_trajectory_factory
 
+# the spatial scaling factor
+sf = 1.0
+# the temporal scaling factor
+sw = 1.0
+# the positional offset
+x_off = np.array([1.0, 1.0, 1.0])
+
+# call the oracle factory function
+x_fn, x_d_fn, x_dd_fn, th_fn, th_d_fn, th_dd_fn = green_sea_turtle_task_space_trajectory_factory(
+    sf=sf, sw=sw, x_off=x_off
+)
+
+# create a vector with time stamps
+ts = np.linspace(0, 10, 1000)
+
+# evaluate the oracle at each time step
+# position, velocity, and acceleration
+x_ts = np.array([x_fn(t) for t in ts])
+x_d_ts = np.array([x_d_fn(t) for t in ts])
+x_dd_ts = np.array([x_dd_fn(t) for t in ts])
+# twist angle, twist angular velocity, and twist angular acceleration
+th_ts = np.array([th_fn(t) for t in ts])
+th_d_ts = np.array([th_d_fn(t) for t in ts])
+th_dd_ts = np.array([th_dd_fn(t) for t in ts])
+```
+
+More examples can be found in the `examples` directory.
 
 ## Provided Oracles
 

@@ -5,13 +5,23 @@ Some oracles are based on real-world observations of turtle locomotion, while ot
 
 ## Installation
 
-Installation is very easy - just clone the repository and install the package using pip.
+Installation is very easy:
+
+Either just clone the repository and install the package (in ediatble mode) using pip.
 
 ```bash
 pip install -e .
 ```
 
+or install the package directly from PyPI:
+
+```bash
+pip install turtle-loc-oracles
+```
+
 ## Usage
+
+
 
 ## Provided Oracles
 

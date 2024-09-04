@@ -122,14 +122,14 @@ dependencies = ["numpy", "peppercorn", "scipy"]
 # dependencies). Users will be able to install these using the "extras"
 # syntax, for example:
 #
-#   $ pip install sampleproject[dev]
+#   $ pip install turtle-loc-oracles[dev]
 #
 # Optional dependencies the project provides. These are commonly
 # referred to as "extras". For a more extensive definition see:
 # https://packaging.python.org/en/latest/specifications/dependency-specifiers/#extras
-[project.optional-dependencies]
-dev = ["check-manifest"]
-test = ["coverage"]
+# [project.optional-dependencies]
+# dev = ["check-manifest"]
+# test = ["coverage"]
 
 # List URLs that are relevant to your project
 #
